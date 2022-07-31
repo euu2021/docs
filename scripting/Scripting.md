@@ -9,7 +9,11 @@ With Freeplane scripting you can
 
 Most people use scripting to automate otherwise tedious procedures like creating a node with a special style and some standard attributes. But much more is possible with scripting.
 
+ 
 <br> __TOC__ 
+
+> **Warning**
+>empty TOC
 
 [External Groovy scripts](External_script_file_execution.md) can be integrated simply by placing them in the *scripts* subdirectory of the Freeplane homedir. Such scripts can be used like any other built-in function of Freeplane.
 
@@ -51,15 +55,26 @@ For ambitious scripting projects or if you have Java/Eclipse know-how you should
 node.text = "Hello World!"
 ```
 
+> **Warning**
+>now, restart FP
 
 * Execute the script by selecting *Tools-&gt;Scripts-&gt;Hello World-&gt;Execute on one selected node*. (Never mind the difference between the *Execute ...* variants; we'll come to that [later](#Execution_modes).)
+> **Warning**
+>I think the execute... part doesn't exist anymore?
 * The text of the selected node will be changed to "Hello World!".
 * To restore the original, press Ctrl-Z.
 * If you like try the other "Execute..." menu items. Test the influence of selecting multiple nodes. Always press Ctrl-Z to revert the changes.
+> **Warning**
+>same as last note
 
 ## Hello Controller
 
 Every script is given the variables 
+
+> **Warning**
+> I don't understand. The term "variable" is too abstract for me in this context. Later, 'c' and 'node' are defined as objects, so I'm confused. The terminology Object>Attribute>Method is easier for me to grasp.
+>  
+> Also, does that mean that every script needs to have one of those two variables? I know scripts that don't use neither of those variables, like 'parent.icons.clear()', so I'm confused. 
 
 <table border="1" style="background-color:#E0E0E0;">
 <tr>
@@ -71,6 +86,10 @@ Every script is given the variables
 </tr>
 </table>
 
+> **Warning**
+> table is broken. and difficult to read on dark mode
+
+
 These give access to the two most important bits of a map. In HelloWorld we used *node*, which gave access to the selected node.
 
 Now we'll change HelloWorld.groovy to use the second, the Controller variable *c*:
@@ -79,15 +98,40 @@ Now we'll change HelloWorld.groovy to use the second, the Controller variable *c
 ```groovy
 c.statusInfo = "Hello World!"
 ```
-
+> **Warning**
+> now, there's no need to restart. It's interesting to point that, because the user then learn that the restart is only necessary for the first load of the script. In the past, I didn't know this, so I would restart FP after every change in the script.
 * Execute the script by selecting *Tools-&gt;Scripts-&gt;Hello World-&gt;Execute on one selected node*.
+> **Warning**
+> again, the execute... thing
 
 The "Controller" manages the status bar. By assigning "Hello World!" to the Controller attribute "statusInfo" we are able to print text to the status bar.
+> **Warning**
+> I think it would be more clear: The "Controller" manages several things in FP, including the status bar'
+>  
+> In the end here the "attribute" terminology appears. I think the user will only understand that after knowing the Object>Attribute>Method idea.
 
 ### The scripting API
 The variables *node* and *c* are "objects" with a list of *attributes* (like "text", "details" or "style") and *methods* that operate on the object, like "addConnector()", "createChild()" or "moveTo()". The "type" of the object decides on the list of attribute of attributes and methods an object has. "node" is of type [Proxy.Node](http://www.freeplane.org/doc/api/org/freeplane/plugin/script/proxy/Proxy.NodeRO.html) while "c" has the type [Proxy.Controller](http://www.freeplane.org/doc/api/org/freeplane/plugin/script/proxy/Proxy.Controller.html).
 
+
+> **Warning**
+> Look: attribute of attributes.
+> 
+> Look: the links
+
+
 To get started with Freeplane scripting you have to get slowly accustomed to the Groovy syntax and the Freeplane specialities too. The types and objects that Freeplane supports are defined by [Freeplane's scripting API](Scripting_API.md). You can learn it step by step: Very little is required to write useful scripts.
+
+> **Warning**
+> This section starts very clear, but there is a big jump to the next paragraph. I think there is a key gap here that could to be filled. 
+>  
+> For example: Where do I find a list of the types of Objects, a list of atttributes associated to each kind of Objects, and a list of methods? The next paragraph sends the user directly to the middle of a list, without explaining what's happening. I find it confusing.
+> 
+> Also, the following explanation pointing to each part of the path is important and could be further developed.
+> 
+> Maybe, showing more how each element of the Object>Attribute>Method get combined in expressions would be helpful.
+> 
+> After that section, the page goes into more specific stuff, so it seems to be this the point where those fundamental ideas can be developed in order to prepare the user for the more specific sections ahead.
 
 An important resource is the built-in scripting documentation that is available via *Help->Scripting API*. Open it now and search for the *statusInfo* attribute at *Scripting API->Proxy->Controller->statusInfo: String (w)*. The text means: The Controller has an attribute *statusInfo* that only can be written to (*w*), that is you can't find out what is currently displayed on the status bar. The attribute has type *String* (either use "double quotes" or 'single quotes'). If you unfold the node you see *void setStatusInfo(String)*. That means that
 ```groovy
