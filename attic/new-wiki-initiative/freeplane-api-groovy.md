@@ -1,6 +1,8 @@
 new-wiki-initiative
 # Freeplane API Groovy tutorial
 
+## Examples of each Method
+
 | Interface                 | Method   | Example Script description                                                                                 | Example Script                                        |
 | ------------------------- | -------- | ---------------------------------------------------------------------------------------------------------- | ----------------------------------------------------- |
 | org.freeplane.api.IconsRO | getAt    | If used on a node with 3 or more icons, it prints the 3rd icon name to the status bar                      | c.statusInfo = node.icons.getAt(2)                    |
