@@ -7,9 +7,9 @@ Please, try this simple 5 steps exercise:
 
 1. First, indentify some of the objects around you: your chair, your phone, a car.
 
-2. Now, notice how each object has it's own set of characteristics. The car has a color, a brand, and a plate.
+2. Now, notice how each object has it's own set of characteristics. The car has, for example, a color, a brand, and a plate.
 
-3. Also, notice that we can interect with each object in different ways: we can accelerate the car, or maybe wash it.
+3. Also, notice that we can interect with each object in different ways: we can accelerate the car, change the tires, or maybe wash it.
 
 4. On the other hand, if you look at a FreePlane mindmap, you will see, for example, nodes, edges, icons. Those are objects inside FreePlane.
 
@@ -38,7 +38,7 @@ Inside each one, you will find it's properties and methods. The properties have 
 
 ![image](https://user-images.githubusercontent.com/77707706/184511248-9c3f4e2b-b475-40ed-a309-9367bde0abb1.png)
 
-As an exercise, try to create some scripts using those methods that interact with Icons. After that, you can check an example of each of those methods in the following table:
+As an exercise, try to create some scripts using those methods that interact with Icons (the ones with a stop sign are not used anymore, so just ignore them). After that, you can check an example of each of those methods in the following table:
 
 | Method   | Example Script description                                                                                 | Example Script                                        |
 | -------- | ---------------------------------------------------------------------------------------------------------- | ----------------------------------------------------- |
@@ -56,5 +56,5 @@ As an exercise, try to create some scripts using those methods that interact wit
 | remove   | Removes the icon "button\_ok" from the selected node                                                       | node.icons.remove("button\_ok")                       |
 | clear    | Removes all the icons from the selected node                                                               | node.icons.clear()                                    |
 
-The most complete and updated list of objects, properties and methods is found at a place called API documentation, which can be opened by using that item of the menu: `Help->Freeplane API…`. Later, we will teach you how to navigate the API documentation.
+The most complete and updated list of objects, properties and methods is found at a place called API documentation, which can be opened by using that item of the menu: `Help->Freeplane API…`. At first, the API documentation may look frigtening and too technical, but, don't worry, we will teach you how to navigate it.
 
