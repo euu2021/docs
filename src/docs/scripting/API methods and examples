@@ -1,4 +1,129 @@
 
-| Category (Edge, Font etc) | Method | Explanation of the example | Code of the example |
-|---------------------------|--------|----------------------------|---------------------|
- 
+| Category (Edge, Font etc) | Method                                                    | Explanation of the example | Code of the example |
+| ------------------------- | --------------------------------------------------------- | -------------------------- | ------------------- |
+| Attributes                | void add(String arg0, Object arg1)                        |                            |                     |
+| Attributes                | void add(String arg0, Object arg1, String arg2)           |                            |                     |
+| Attributes                | attributeNames: List (r)                                  |                            |                     |
+| Attributes                | List getAttributeNames()                                  |                            |                     |
+| Attributes                | void clear()                                              |                            |                     |
+| Attributes                | boolean containsKey(String arg0)                          |                            |                     |
+| Attributes                | empty: boolean (r)                                        |                            |                     |
+| Attributes                | boolean isEmpty()                                         |                            |                     |
+| Attributes                | int findAttribute(String arg0)                            |                            |                     |
+| Attributes                | int findFirst(String arg0)                                |                            |                     |
+| Attributes                | List findValues(AttributeCondition arg0)                  |                            |                     |
+| Attributes                | List findValues(Closure closure)                          |                            |                     |
+| Attributes                | Object get(String arg0)                                   |                            |                     |
+| Attributes                | Object get(int arg0)                                      |                            |                     |
+| Attributes                | List getAll(String arg0)                                  |                            |                     |
+| Attributes                | Object getFirst(String arg0)                              |                            |                     |
+| Attributes                | String getKey(int arg0)                                   |                            |                     |
+| Attributes                | Map getMap()                                              |                            |                     |
+| Attributes                | List getNames()                                           |                            |                     |
+| Attributes                | Attributes getTransformed()                               |                            |                     |
+| Attributes                | List getValues()                                          |                            |                     |
+| Attributes                | boolean isEmpty()                                         |                            |                     |
+| Attributes                | Iterator iterator()                                       |                            |                     |
+| Attributes                | map: Map (r)                                              |                            |                     |
+| Attributes                | Map getMap()                                              |                            |                     |
+| Attributes                | names: List (r)                                           |                            |                     |
+| Attributes                | List getNames()                                           |                            |                     |
+| Attributes                | void optimizeWidths()                                     |                            |                     |
+| Attributes                | boolean remove(String arg0)                               |                            |                     |
+| Attributes                | void remove(int arg0)                                     |                            |                     |
+| Attributes                | boolean removeAll(String arg0)                            |                            |                     |
+| Attributes                | void set(String arg0, Object arg1)                        |                            |                     |
+| Attributes                | void set(int arg0, Object arg1)                           |                            |                     |
+| Attributes                | void set(int arg0, String arg1, Object arg2)              |                            |                     |
+| Attributes                | void set(int arg0, String arg1, Object arg2, String arg3) |                            |                     |
+| Attributes                | void setFormat(int arg0, String arg1)                     |                            |                     |
+| Attributes                | int size()                                                |                            |                     |
+| Attributes                | Stream stream()                                           |                            |                     |
+| Attributes                | transformed: Attributes (r)                               |                            |                     |
+| Attributes                | Attributes getTransformed()                               |                            |                     |
+| Attributes                | values: List (r)                                          |                            |                     |
+| Attributes                | List getValues()                                          |                            |                     |
+| Cloud                     | color: Color (rw)                                         |                            |                     |
+| Cloud                     | Color getColor()                                          |                            |                     |
+| Cloud                     | void setColor(Color arg0)                                 |                            |                     |
+| Cloud                     | colorCode: String (rw)                                    |                            |                     |
+| Cloud                     | String getColorCode()                                     |                            |                     |
+| Cloud                     | void setColorCode(String arg0)                            |                            |                     |
+| Cloud                     | enabled: boolean (rw)                                     |                            |                     |
+| Cloud                     | boolean getEnabled()                                      |                            |                     |
+| Cloud                     | void setEnabled(boolean arg0)                             |                            |                     |
+| Cloud                     | Color getColor()                                          |                            |                     |
+| Cloud                     | String getColorCode()                                     |                            |                     |
+| Cloud                     | boolean getEnabled()                                      |                            |                     |
+| Cloud                     | String getShape()                                         |                            |                     |
+| Cloud                     | shape: String (rw)                                        |                            |                     |
+| Cloud                     | String getShape()                                         |                            |                     |
+| Cloud                     | void setShape(String arg0)                                |                            |                     |
+| Connector                 | color: Color (rw)                                         |                            |                     |
+| Connector                 | Color getColor()                                          |                            |                     |
+| Connector                 | void setColor(Color arg0)                                 |                            |                     |
+| Connector                 | colorCode: String (rw)                                    |                            |                     |
+| Connector                 | String getColorCode()                                     |                            |                     |
+| Connector                 | void setColorCode(String arg0)                            |                            |                     |
+| Connector                 | dashArray: int[] (rw)                                     |                            |                     |
+| Connector                 | int[] getDashArray()                                      |                            |                     |
+| Connector                 | void setDashArray(int[] arg0)                             |                            |                     |
+| Connector                 | endArrow: ArrowType (rw)                                  |                            |                     |
+| Connector                 | ArrowType getEndArrow()                                   |                            |                     |
+| Connector                 | void setEndArrow(boolean arg0)                            |                            |                     |
+| Connector                 | endInclination: List (r)                                  |                            |                     |
+| Connector                 | List getEndInclination()                                  |                            |                     |
+| Connector                 | Color getColor()                                          |                            |                     |
+| Connector                 | String getColorCode()                                     |                            |                     |
+| Connector                 | int[] getDashArray()                                      |                            |                     |
+| Connector                 | List getEndInclination()                                  |                            |                     |
+| Connector                 | String getLabelFontFamily()                               |                            |                     |
+| Connector                 | int getLabelFontSize()                                    |                            |                     |
+| Connector                 | String getMiddleLabel()                                   |                            |                     |
+| Connector                 | int getOpacity()                                          |                            |                     |
+| Connector                 | String getShape()                                         |                            |                     |
+| Connector                 | Node getSource()                                          |                            |                     |
+| Connector                 | String getSourceLabel()                                   |                            |                     |
+| Connector                 | List getStartInclination()                                |                            |                     |
+| Connector                 | Node getTarget()                                          |                            |                     |
+| Connector                 | String getTargetLabel()                                   |                            |                     |
+| Connector                 | int getWidth()                                            |                            |                     |
+| Connector                 | boolean hasEndArrow()                                     |                            |                     |
+| Connector                 | boolean hasStartArrow()                                   |                            |                     |
+| Connector                 | labelFontFamily: String (rw)                              |                            |                     |
+| Connector                 | String getLabelFontFamily()                               |                            |                     |
+| Connector                 | void setLabelFontFamily(String arg0)                      |                            |                     |
+| Connector                 | labelFontSize: int (rw)                                   |                            |                     |
+| Connector                 | int getLabelFontSize()                                    |                            |                     |
+| Connector                 | void setLabelFontSize(int arg0)                           |                            |                     |
+| Connector                 | middleLabel: String (rw)                                  |                            |                     |
+| Connector                 | String getMiddleLabel()                                   |                            |                     |
+| Connector                 | void setMiddleLabel(String arg0)                          |                            |                     |
+| Connector                 | opacity: int (rw)                                         |                            |                     |
+| Connector                 | int getOpacity()                                          |                            |                     |
+| Connector                 | void setOpacity(int arg0)                                 |                            |                     |
+| Connector                 | void setInclination(List arg0, List arg1)                 |                            |                     |
+| Connector                 | shape: String (rw)                                        |                            |                     |
+| Connector                 | String getShape()                                         |                            |                     |
+| Connector                 | void setShape(String arg0)                                |                            |                     |
+| Connector                 | simulatesEdge: boolean (w)                                |                            |                     |
+| Connector                 | void setSimulatesEdge(boolean arg0)                       |                            |                     |
+| Connector                 | boolean simulatesEdge()                                   |                            |                     |
+| Connector                 | source: Node (r)                                          |                            |                     |
+| Connector                 | Node getSource()                                          |                            |                     |
+| Connector                 | sourceLabel: String (rw)                                  |                            |                     |
+| Connector                 | String getSourceLabel()                                   |                            |                     |
+| Connector                 | void setSourceLabel(String arg0)                          |                            |                     |
+| Connector                 | startArrow: ArrowType (rw)                                |                            |                     |
+| Connector                 | ArrowType getStartArrow()                                 |                            |                     |
+| Connector                 | void setStartArrow(boolean arg0)                          |                            |                     |
+| Connector                 | startInclination: List (r)                                |                            |                     |
+| Connector                 | List getStartInclination()                                |                            |                     |
+| Connector                 | target: Node (r)                                          |                            |                     |
+| Connector                 | Node getTarget()                                          |                            |                     |
+| Connector                 | targetLabel: String (rw)                                  |                            |                     |
+| Connector                 | String getTargetLabel()                                   |                            |                     |
+| Connector                 | void setTargetLabel(String arg0)                          |                            |                     |
+| Connector                 | width: int (rw)                                           |                            |                     |
+| Connector                 | int getWidth()                                            |                            |                     |
+| Connector                 | void setWidth(int arg0)                                   |                            |
